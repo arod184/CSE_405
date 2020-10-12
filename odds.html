@@ -5,6 +5,24 @@
     <title> Best Odds?</title>
 </head>
 <body>
-    <h1>Who has the best odds?</h1>
+    <h1>BOXER INFO </h1>
+    <script type="text/javascript">
+      function Json() {
+        var boxers = {
+          "name" : "Lomachenko",
+          "age" : 32,
+          "born" : "Ukraine"
+        };
+        for(var i in boxers) {
+          document.getElementById("jsonData").innerHTML += boxers[i] + "<br>"
+        }
+
+      }
+    </script>
+
+    <div class="col-sm-12">
+        <button type="submit" onclick="Json()">Click me</button>
+    </div>
+    <div id="jsonData"></div>
 </body>
 </html>
