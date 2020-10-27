@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF=8">
     <title> Best Odds?</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="firebase.js"> </script>
 </head>
 <body>
-<<<<<<< HEAD
     <h1>BOXER INFO </h1>
-    <script type="text/javascript">
-      function Json() {
-        var boxers = {
-          "name" : "Lomachenko",
-          "age" : 32,
-          "born" : "Ukraine"
-        };
-        for(var i in boxers) {
-          document.getElementById("jsonData").innerHTML += boxers[i] + "<br>"
-        }
+    <div id="SignContainer">
+      <input type="email" placeholder="email" id="email"/>
+      <input type=="password" placeholder="password" id="password"/>
 
+      <button onclick="signUp()" id="signUp"> Sign Up </button>
+      <button onclick="signIn()" id="signIn"> Sign In </button>
+      <button onclick="signOut()" id="signOut"> Sign Out </button>
+    </div>
+
+    <script>
+    var boxers = [
+      {
+      name : "Lomachenko",
+      age : 32,
+      born : "Ukraine"
+      },
+      {
+      name : "Teofimo Lopez",
+      age : "23",
+      born : "USA"
       }
+    ];
+
+    var BoxerStr = JSON.parse(JSON.stringify(boxers))
+    console.log(BoxerStr);
+
+    var BoxerStrFormat = JSON.stringify(boxers, null, 4);
+    console.log(BoxerStrFormat)
     </script>
 
-    <div class="col-sm-12">
-        <button type="submit" onclick="Json()">Click me</button>
-    </div>
-    <div id="jsonData"></div>
+
 </body>
 </html>
-=======
-    <h1>Who has the best odds?</h1>
-</body>
-</html>
->>>>>>> 2fe6f05a50590200d1bf33d747b820777a999f7b
