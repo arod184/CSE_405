@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF=8">
+    <title> Best Odds?</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="firebase.js"> </script>
+</head>
+<body>
+    <h1>BOXER INFO </h1>
+    <div id="SignContainer">
+      <input type="email" placeholder="email" id="email"/>
+      <input type=="password" placeholder="password" id="password"/>
+
+      <button onclick="signUp()" id="signUp"> Sign Up </button>
+      <button onclick="signIn()" id="signIn"> Sign In </button>
+      <button onclick="signOut()" id="signOut"> Sign Out </button>
+    </div>
+
+    <script>
+    var boxers = [
+      {
+      name : "Lomachenko",
+      age : 32,
+      born : "Ukraine"
+      },
+      {
+      name : "Teofimo Lopez",
+      age : "23",
+      born : "USA"
+      }
+    ];
+
+    var BoxerStr = JSON.parse(JSON.stringify(boxers))
+    console.log(BoxerStr);
+
+    var BoxerStrFormat = JSON.stringify(boxers, null, 4);
+    console.log(BoxerStrFormat)
+    </script>
+
+
+</body>
+</html>
